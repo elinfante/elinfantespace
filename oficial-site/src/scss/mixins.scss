@@ -1,0 +1,43 @@
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin align-items($alignment) {
+    align-items: $alignment;
+}
+
+@mixin display-flex() {
+    display: flex;
+}
+
+@mixin justify-content($alignment) {
+    justify-content: $alignment;
+}
+
+@mixin transform($transform) {
+    transform: $transform;
+}
+
+@mixin transform-origin($origin) {
+    transform-origin: $origin;
+}
+
+@mixin opacity($value) {
+    opacity: $value;
+}
+
+@mixin align-items($value) {
+    align-items: $value;
+}
+
+@mixin flex-direction($value) {
+    flex-direction: $value;
+}
+
+@mixin flex-wrap($value) {
+    flex-wrap: $value;
+}
+
+@mixin flex($value) {
+    flex: $value;
+}
