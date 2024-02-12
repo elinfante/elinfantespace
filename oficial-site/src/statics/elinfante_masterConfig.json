@@ -30,14 +30,14 @@
         {
           "pos" : 0,
           "id" : 66,
-          "num_thumbs" : 7,
+          "num_thumbs" : 6,
           "name" : "Richard Phibbs Fine Art",
           "description" : "Stunning Fine Art Portfolio for one of the most succesful photographers in the fashion industry.",
           "url" : "http://richardphibbsfineart.com/",
-          "tags" : "Vue-Js, Html, JavaScript, SCSS",
+          "tags" : "Html, JavaScript, SCSS",
           "client" : "Richard Phibbs",
           "client_url" : "http://www.richardphibbs.com/",
-          "date" : "01/10/2017"
+          "date" : "01/10/2023"
         },
         {
           "pos": 0,
