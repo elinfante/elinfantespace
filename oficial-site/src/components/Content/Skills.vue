@@ -25,6 +25,7 @@
               <div class="col-md-4">
 
                 <ul>
+                  <li>LLM (Large Language Model)</li>
                   <li>Vue2/3</li>
                   <li>JavaScript ES6</li>
                   <li>HTML</li>
