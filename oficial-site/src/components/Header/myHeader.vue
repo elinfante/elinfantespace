@@ -79,7 +79,6 @@ import $ from 'jquery';
 
 	  },
 	  mounted: function(){
-	  	console.log('Component mounted');
 	  	this.$router.beforeEach((to, from, next) => {
 	  		this.closeMenu();
 	  		next();
@@ -273,7 +272,7 @@ import $ from 'jquery';
 	  		}
 	  	},
 	  	animateLogoText: function() {
-	  		console.log('Animating logo text');
+	  		//console.log('Animating logo text');
 	  		const letters = this.logoText.split('');
 	  		let index = 0;
 	  		
