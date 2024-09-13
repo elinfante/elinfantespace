@@ -43,7 +43,10 @@
           "client" : "Richard Phibbs",
           "client_url" : "http://www.richardphibbs.com/",
           "date" : "01/10/2023",
-          "quote": false
+          "quote": {
+            "text": "Working with Juan was a great experience. He has a solid understanding of front-end development and design, and he brought my ideas to life in a clean, functional way. He was easy to communicate with and kept me updated throughout the project. The final product exceeded my expectations, and I’d definitely recommend Juan for web development work.",
+            "author": "Richard Phibbs"  
+          }
         },
         {
           "pos": 0,
@@ -73,19 +76,6 @@
         },
         {
           "pos": 0,
-          "id" : 58,
-          "num_thumbs" : 8,
-          "name" : "Naked Juice Facebook App",
-          "description" : "Online Facebook application for Naked Juice when I worked in Territory Studios as a freelance.",
-          "url" : false,
-          "tags" : "Html, JavaScript, CSS3",
-          "client" : "1000 Heads",
-          "client_url" : "https://1000heads.com/",
-          "date" : "01/06/2014",
-          "quote": false
-        },
-        {
-          "pos": 0,
           "id" : 57,
           "num_thumbs" : 6,
           "name" : "Onboarding, BA Intranet",
@@ -94,7 +84,11 @@
           "tags" : "Html, CSS3",
           "client" : "Line Communications",
           "client_url" : "https://www.line.co.uk/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": {
+            "text": "Juan did an excellent job on our website redesign. He was responsive, professional, and understood our vision clearly. His ability to balance aesthetics with functionality really stood out, and the end result was exactly what we were looking for. He delivered the project on time and made the process smooth and stress-free. I would definitely work with Juan again and recommend him to anyone in need of front-end development expertise.",
+            "author": "Line Communications"  
+          }
         },
         {
           "pos": 0,
@@ -107,7 +101,10 @@
           "client" : "Glass Eye",
           "client_url" : "http://www.glasseyeinc.com/",
           "date" : "01/06/2014",
-          "quote": false
+          "quote": {
+            "text": "We had the pleasure of collaborating with Juan again after working together at PPC. His front-end development skills have always been top-notch, and he continues to deliver clean, efficient code that aligns perfectly with our project goals. Juan is easy to work with, always open to feedback, and brings great ideas to the table. His ability to blend creative design with technical execution is impressive, and we look forward to future collaborations.",
+            "author": "Dan Light & Suffron Tucker"  
+          } 
         },
         {
           "pos": 0,
@@ -132,7 +129,11 @@
           "tags" : "Flash",
           "client" : "Glass Eye",
           "client_url" : "http://www.glasseyeinc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": {
+            "text": "We had the pleasure of collaborating with Juan again after working together at PPC. His front-end development skills have always been top-notch, and he continues to deliver clean, efficient code that aligns perfectly with our project goals. Juan is easy to work with, always open to feedback, and brings great ideas to the table. His ability to blend creative design with technical execution is impressive, and we look forward to future collaborations.",
+            "author": "Dan Light & Suffron Tucker"  
+          } 
         },
         {
           "pos": 0,
@@ -145,7 +146,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -158,7 +162,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -170,7 +177,11 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -182,7 +193,11 @@
           "tags" : "Flash,Facebook",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -195,7 +210,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -208,7 +226,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -221,7 +242,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -234,7 +258,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false  
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -247,7 +274,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false  
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -260,7 +290,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false  
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }
         },
         {
           "pos": 0,
@@ -273,7 +306,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false  
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }
         },
         {
           "pos": 0,
@@ -286,7 +322,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -298,7 +337,11 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }
         },
         {
           "pos": 0,
@@ -311,7 +354,10 @@
           "client" : "Javier Aramburu",
           "client_url" : false,
           "date" : "01/06/2014",
-          "quote": false  
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          } 
         },
         {
           "pos": 0,
@@ -324,7 +370,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -337,7 +386,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -350,7 +402,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -362,7 +417,11 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }
         },
         {
           "pos": 0,
@@ -375,7 +434,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false      
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }      
         },
         {
           "pos": 0,
@@ -388,7 +450,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -401,7 +466,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -414,7 +482,10 @@
           "client" : "Juan Infante",
           "client_url" : false,
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -427,7 +498,10 @@
           "client" : "Juan Infante",
           "client_url" : false,
           "date" : "01/06/2014",
-          "quote": false      
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }      
         },
         {
           "pos": 0,
@@ -439,7 +513,11 @@
           "tags" : "Flash",
           "client" : "Juan Infante",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }
         },
         {
           "pos": 0,
@@ -452,7 +530,10 @@
           "client" : "Juan Infante",
           "client_url" : false,
           "date" : "01/06/2014",
-          "quote": false      
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }      
         },
         {
           "pos": 0,
@@ -465,7 +546,10 @@
           "client" : "Juan Infante",
           "client_url" : false,
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -478,7 +562,10 @@
           "client" : "Juan Infante",
           "client_url" : false,
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -491,7 +578,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -504,7 +594,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -516,7 +609,11 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }
         },
         {
           "pos": 0,
@@ -529,7 +626,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false      
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }      
         },
         {
           "pos": 0,
@@ -542,7 +642,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -555,7 +658,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -568,7 +674,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }    
         },
         {
           "pos": 0,
@@ -581,7 +690,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false      
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }      
         },
         {
           "pos": 0,
@@ -594,7 +706,10 @@
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
           "date" : "01/06/2014",
-          "quote": false    
+          "quote": {
+            "text": "Juan was an integral part of our team at The Picture Production Company for eight years. His expertise in front-end development, along with his dedication to each project, made him a reliable and valued member of our production team. Juan consistently delivered high-quality work, always ensuring that our designs translated smoothly into user-friendly experiences. His attention to detail and ability to collaborate across teams made him a pleasure to work with. We highly recommend Juan for any future projects.",
+            "author": "head of PPC Multimedia department"  
+          }
         }
     ],
 

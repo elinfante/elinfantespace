@@ -381,7 +381,7 @@ span.num {
     position: absolute;
     top: 60px;
     left: 60px;
-    background-color: rgba(255, 255, 255, 0.8); // White with 70% opacity
+    background-color: rgba(255, 255, 255, 0.9); // White with 70% opacity
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
