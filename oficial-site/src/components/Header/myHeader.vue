@@ -54,8 +54,10 @@ import $ from 'jquery';
 	  		currentAvatar : 0,
 	  		numAvatars : 5,
 	  		circleMask : null,
-	  		pogressG : null,
+	  		avatar : null,
 			ring : null,
+	  		progressInterrupted: false,
+	  		delayTimer: null,
 	  	}
 	  },
 	  watch: {
@@ -71,64 +73,104 @@ import $ from 'jquery';
 	  	}
 	  	this.onWindowScroll();
 	  },
+	  beforeUnmount: function() {
+	    // Clean up any ongoing animations or timers
+	    this.progressInterrupted = true;
+	    if (this.delayTimer) {
+	      clearTimeout(this.delayTimer);
+	    }
+	  },
 	  methods : {
 	  	createAvatar : function() {
-	  		this.loadAvatarImage(d3.select('svg'));
-  			this.loadProgress(d3.select('svg'));
+	  		const svg = d3.select('svg');
+	  		this.loadAvatarImage(svg);
 	  	}, 
 	  	loadAvatarImage : function (d3SVG) {
-			this.currentAvatar = Math.floor(Math.random() * this.numAvatars)+1
-			this.currentAvatar = (this.currentAvatar > this.numAvatars) ? 1 : this.currentAvatar;
-			var urlImage = ('/assets/img/avatars/avatar' + this.currentAvatar + '.jpg');
+			this.currentAvatar = (this.currentAvatar % this.numAvatars) + 1;
+			var urlImage = `/assets/img/avatars/avatar${this.currentAvatar}.jpg`;
 
-			// Load circle mask
 			if (!this.circleMask) {
 				this.circleMask = d3SVG.append("clipPath")
 					.attr("id", "mask-circle")
 					.append("circle")
 					.attr("cx", 40)
 					.attr("cy", 40)
-					.attr("r", 39)
+					.attr("r", 37.5)  // (80 - 5) / 2
 					.style("fill", "#ff0000");
 			}
 
-			// Load the image
 			if (!this.avatar) {
 				this.avatar = d3SVG.append("image")
-					.on('load', function() {
-						// Remove the listener we do not need it any longer
-						d3.select(this).on('load', null);
-					})
-					.on('error', function() {
-						// Remove the listener we do not need it any longer
-						d3.select(this).on('error', null);
-					})
 					.attr("xlink:href", urlImage)
 					.attr("width", 80)
 					.attr("height", 80)
 					.attr("clip-path", "url(#mask-circle)")
 
-				// Add ring on top of the image
 				if (!this.ring) {
 					this.ring = d3SVG.append("circle")
 						.attr("cx", 40)
 						.attr("cy", 40)
-						.attr("r", 39) // Set initial radius to 0
+						.attr("r", 37.5)  // (80 - 5) / 2
 						.style("fill", "none")
-						.style("stroke", "#5bcf1c") // Set the stroke colour
-						.style("stroke-width", 10) // Set the stroke width
-						.attr("clip-path", "url(#mask-circle)")
+						.style("stroke", this.progressColor)
+						.style("stroke-width", 5)  // Updated to 5px
+						.style("stroke-dasharray", "0 235.62")  // 2 * PI * 37.5
 				}
-
-
 			} else {
-				this.avatar.attr("xlink:href", urlImage);
+				// Fade out current avatar
+				this.avatar.transition()
+					.duration(500)
+					.style("opacity", 0)
+					.on("end", () => {
+						// Update image and fade in
+						this.avatar.attr("xlink:href", urlImage)
+							.transition()
+							.duration(500)
+							.style("opacity", 1);
+					});
 			}
+
+			// Interrupt any ongoing animation or delay
+			this.progressInterrupted = true;
+			if (this.delayTimer) {
+				clearTimeout(this.delayTimer);
+			}
+
+			// Start the progress animation
+			this.startProgressAnimation();
 	  	},
 	  	loadProgress : function (d3SVG) {
+	  		// This method is now empty as we've moved the progress logic to startProgressAnimation
+	  	},
+	  	startProgressAnimation: function() {
+	  		// Reset the interrupted flag
+	  		this.progressInterrupted = false;
 
-	  		
+	  		const animationDuration = 1000; // 1 second
+	  		const startTime = Date.now();
 
+	  		const animate = () => {
+	  			if (this.progressInterrupted) return;
+
+	  			const elapsedTime = Date.now() - startTime;
+	  			const progress = Math.min(elapsedTime / animationDuration, 1);
+	  			
+	  			const dashArray = progress * 235.62;  // 2 * PI * 37.5
+	  			this.ring.style("stroke-dasharray", `${dashArray} 235.62`);
+
+	  			if (progress < 1) {
+	  				requestAnimationFrame(animate);
+	  			} else {
+	  				// Animation completed, wait for 3 seconds before loading next avatar
+	  				this.delayTimer = setTimeout(() => {
+	  					if (!this.progressInterrupted) {
+	  						this.loadAvatarImage(d3.select('svg'));
+	  					}
+	  				}, 3000);
+	  			}
+	  		};
+
+	  		requestAnimationFrame(animate);
 	  	},
 	  	clickMenu : function() {
 	  		let page = $('.page');
@@ -394,7 +436,7 @@ import $ from 'jquery';
           .avatar__holder{
             width:50px;
             height:50px;
-            @include transform(scale(0.625, 0.625));
+            @include transform(scale(0.625, 0.625)); // 50/80 = 0.625
             @include transform-origin(0,0);
           }
 
@@ -413,7 +455,7 @@ import $ from 'jquery';
         .avatar__holder{
           width:50px;
           height:50px;
-          @include transform(scale(0.625, 0.625));
+          @include transform(scale(0.625, 0.625)); // 50/80 = 0.625
           @include transform-origin(0,0);
         }
 
