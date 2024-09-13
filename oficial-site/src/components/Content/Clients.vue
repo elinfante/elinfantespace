@@ -9,6 +9,9 @@
       	<div class="clients_holder row">
 
               <div class="col-md-3 col-xs-6">
+                <img class="client_thumb img-thumbnail" src="/assets/img/clients/logo17.png" width="100%"></img>
+              </div>
+              <div class="col-md-3 col-xs-6">
                 <img class="client_thumb img-thumbnail" src="/assets/img/clients/logo1.png" width="100%"></img>
               </div>
               <div class="col-md-3 col-xs-6">
@@ -53,9 +56,7 @@
               <div class="col-md-3 col-xs-6">
                 <img class="client_thumb img-thumbnail" src="/assets/img/clients/logo15.png" width="100%"></img>
               </div>
-              <div class="col-md-3 col-xs-6">
-                <img class="client_thumb img-thumbnail" src="/assets/img/clients/logo16.png" width="100%"></img>
-              </div>
+              
 
             </div>
 
