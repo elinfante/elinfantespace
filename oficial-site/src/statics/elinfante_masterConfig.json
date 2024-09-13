@@ -13,7 +13,11 @@
           "tags" : "Html, JavaScript, SCSS",
           "client" : "Richard Phibbs",
           "client_url" : "http://www.richardphibbs.com/",
-          "date" : "01/11/2023"
+          "date" : "01/11/2023",
+          "quote": {
+            "text": "Working with Juan was a great experience. He has a solid understanding of front-end development and design, and he brought my ideas to life in a clean, functional way. He was easy to communicate with and kept me updated throughout the project. The final product exceeded my expectations, and I’d definitely recommend Juan for web development work.",
+            "author": "Richard Phibbs"  
+          }
         },
         {
           "pos" : 0,
@@ -25,7 +29,8 @@
           "tags" : "Vue-Js, Html, JavaScript, SCSS, Midjourney",
           "client" : "Buzz Radar Ltd.",
           "client_url" : "http://www.buzzradar.com/",
-          "date" : "01/12/2023"
+          "date" : "01/12/2023",
+          "quote": false
         },
         {
           "pos" : 0,
@@ -37,7 +42,8 @@
           "tags" : "Html, JavaScript, SCSS",
           "client" : "Richard Phibbs",
           "client_url" : "http://www.richardphibbs.com/",
-          "date" : "01/10/2023"
+          "date" : "01/10/2023",
+          "quote": false
         },
         {
           "pos": 0,
@@ -49,7 +55,8 @@
           "tags" : "Html, JavaScript, CSS3, Bootstrap",
           "client" : "NHS",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -61,7 +68,8 @@
           "tags" : "Html, JavaScript, CSS3",
           "client" : "1000 Heads",
           "client_url" : "https://1000heads.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -73,7 +81,8 @@
           "tags" : "Html, JavaScript, CSS3",
           "client" : "1000 Heads",
           "client_url" : "https://1000heads.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -97,7 +106,8 @@
           "tags" : "Flash",
           "client" : "Glass Eye",
           "client_url" : "http://www.glasseyeinc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -109,7 +119,8 @@
           "tags" : "Flash",
           "client" : "Substance",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -133,7 +144,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -145,7 +157,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -181,7 +194,8 @@
           "tags" : "Flash,Facebook",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -193,7 +207,8 @@
           "tags" : "Flash,Facebook",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -205,7 +220,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false
         },
         {
           "pos": 0,
@@ -217,7 +233,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false  
         },
         {
           "pos": 0,
@@ -229,7 +246,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false  
         },
         {
           "pos": 0,
@@ -241,7 +259,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false  
         },
         {
           "pos": 0,
@@ -253,7 +272,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false  
         },
         {
           "pos": 0,
@@ -265,7 +285,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -289,7 +310,8 @@
           "tags" : "Flash",
           "client" : "Javier Aramburu",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false  
         },
         {
           "pos": 0,
@@ -301,7 +323,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -313,7 +336,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -325,7 +349,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -349,7 +374,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false      
         },
         {
           "pos": 0,
@@ -361,7 +387,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -373,7 +400,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -385,7 +413,8 @@
           "tags" : "Flash",
           "client" : "Juan Infante",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -397,7 +426,8 @@
           "tags" : "Flash",
           "client" : "Juan Infante",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false      
         },
         {
           "pos": 0,
@@ -421,7 +451,8 @@
           "tags" : "Flash",
           "client" : "Juan Infante",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false      
         },
         {
           "pos": 0,
@@ -433,7 +464,8 @@
           "tags" : "Flash",
           "client" : "Juan Infante",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -445,7 +477,8 @@
           "tags" : "Flash",
           "client" : "Juan Infante",
           "client_url" : false,
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -457,7 +490,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -469,7 +503,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -493,7 +528,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false      
         },
         {
           "pos": 0,
@@ -505,7 +541,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -517,7 +554,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -529,7 +567,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         },
         {
           "pos": 0,
@@ -541,7 +580,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false      
         },
         {
           "pos": 0,
@@ -553,7 +593,8 @@
           "tags" : "Flash",
           "client" : "The PPC (Picture Production Company)",
           "client_url" : "http://www.theppc.com/",
-          "date" : "01/06/2014"
+          "date" : "01/06/2014",
+          "quote": false    
         }
     ],
 

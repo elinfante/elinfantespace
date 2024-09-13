@@ -21,20 +21,31 @@
 
     <div class="project__img">
       <div class="img_holder">
+        <!-- This is the ribbon that shows the quote -->
         <div
+          v-if="this.projectMO.quote"
           class="ribbon"
           @mouseenter="activateRibbon"
           @mouseleave="deactivateRibbon"
           @click="toggleRibbon"
         >
-          <i class="fa-solid fa-quote-left"></i>
-          <div v-show="showMessage" class="message-box">
-            <i class="fa-solid fa-quote-left fa-1x"></i>
-            This is where I have display the quote from the Client. In this case... Richard Phibbs
-            <i class="fa-solid fa-quote-right fa-1x"></i>
-            <div class="mt-2 fw-bold small">by Richard Phibbs</div>
+          <i class="fa-solid fa-quote-left fa-1x"></i>
+        </div>
+        <!-- This is the ribbon that shows the quote -->
+
+        <div
+          v-if="this.projectMO.quote"
+          v-show="showMessage"
+          class="message-box"
+        >
+          <i class="fa-solid fa-quote-left fa-1x"></i>
+          {{ this.projectMO.quote.text }}
+          <i class="fa-solid fa-quote-right fa-1x"></i>
+          <div class="mt-4 fw-bolder small">
+            by {{ this.projectMO.quote.author }}
           </div>
         </div>
+
         <img v-on:click="gotoProject(id)" :src="this.thumbURL" width="100%" />
       </div>
     </div>
@@ -93,10 +104,10 @@ export default {
   },
   mounted() {
     this.checkMobile();
-    window.addEventListener('resize', this.checkMobile);
+    window.addEventListener("resize", this.checkMobile);
   },
   beforeDestroy() {
-    window.removeEventListener('resize', this.checkMobile);
+    window.removeEventListener("resize", this.checkMobile);
   },
   methods: {
     nextThumb: function (e) {
@@ -356,7 +367,7 @@ span.num {
     z-index: 1;
     cursor: pointer;
 
-    >i {
+    > i {
       position: absolute;
       top: -60px;
       left: 10px;
@@ -367,18 +378,20 @@ span.num {
   }
 
   .message-box {
-      position: absolute;
-      top: -30px;
-      left: 30px;
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      z-index: 2;
-      width: 300px;
-      animation: bounceIn 0.5s;
-    }
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    background-color: rgba(255, 255, 255, 0.8); // White with 70% opacity
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    width: 80%;
+    animation: bounceIn 0.5s;
+    font-size: 1rem;
+    color: black; // Ensure text remains fully opaque
+  }
 }
 
 @keyframes bounceIn {
