@@ -26,7 +26,7 @@
           @mouseenter="showMessage = true"
           @mouseleave="showMessage = false"
         >
-          <i class="fa-solid fa-crown"></i>
+          <i class="fa-solid fa-quote-left"></i>
           <div v-show="showMessage" class="message-box">
             Hello, this is a test to see if it works
           </div>
@@ -320,32 +320,32 @@ span.num {
     height: 0;
     border-style: solid;
     border-width: 70px 70px 0 0; // Increased from 50px to 70px
-    border-color: yellow transparent transparent transparent;
+    border-color: #fff transparent transparent transparent;
     z-index: 1;
 
     i {
       position: absolute;
       top: -60px;
-      left: 7px;
+      left: 10px;
       color: #000; // Adjust color as needed
       font-size: 24px; // Adjust size as needed
       transform: rotate(-45deg);
     }
+  }
 
-    .message-box {
+  .message-box {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: -30px;
+      left: 30px;
       background-color: white;
       border: 1px solid #ccc;
       padding: 10px;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       z-index: 2;
-      width: 200px;
+      width: 300px;
       animation: bounceIn 0.5s;
     }
-  }
 }
 
 @keyframes bounceIn {
