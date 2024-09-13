@@ -15,8 +15,13 @@
 	            </a>
 	          </div>
 	          <div class="logo__text">
-	            <a href="/">El Infante</a>
-	            <h2 class="logo__subtitle mt-1">Front End Engineer and Web Design Specialist</h2>
+	            <a href="/" ref="logoText" class="logo-link">
+	              <transition-group name="slide-up" tag="span">
+	                <span v-for="(letter, index) in logoLetters" :key="index" class="logo-letter" v-html="letter">
+	                </span>
+	              </transition-group>
+	            </a>
+	            <h2 class="logo__subtitle mt-1">Innovative <strong>Front-End Engineer</strong> | Web Specialist | <strong>AI Prompt Engineer</strong></h2>
 	          </div>
 	        </div>
 
@@ -59,12 +64,14 @@ import $ from 'jquery';
 	  		progressInterrupted: false,
 	  		delayTimer: null,
 	  		preloadedImages: [],
+	  		logoLetters: [],
 	  	}
 	  },
 	  watch: {
 
 	  },
 	  mounted: function(){
+	  	console.log('Component mounted');
 	  	this.$router.beforeEach((to, from, next) => {
 	  		this.closeMenu();
 	  		next();
@@ -74,6 +81,7 @@ import $ from 'jquery';
 	  	}
 	  	this.onWindowScroll();
 	  	this.preloadAvatars();
+	  	this.animateLogoText();
 	  },
 	  beforeUnmount: function() {
 	    // Clean up any ongoing animations or timers
@@ -255,6 +263,16 @@ import $ from 'jquery';
 	  			img.src = `/assets/img/avatars/avatar${i}.jpg`;
 	  			this.preloadedImages.push(img);
 	  		}
+	  	},
+	  	animateLogoText: function() {
+	  		console.log('Animating logo text');
+	  		const text = "El\u00A0Infante"; // Using non-breaking space
+	  		const letters = text.split('');
+	  		letters.forEach((letter, index) => {
+	  			setTimeout(() => {
+	  				this.logoLetters.push(letter === '\u00A0' ? '&nbsp;' : letter);
+	  			}, index * 75); // 150ms delay between each character, including space
+	  		});
 	  	}
 	  }
 	}
@@ -394,6 +412,14 @@ import $ from 'jquery';
       .logo__text{
         margin-left:10px;
 
+        .logo-link {
+          display: inline-block;
+          overflow: hidden;
+          text-decoration: none;
+          color: inherit;
+          white-space: nowrap; // Ensure the text stays on one line
+        }
+
         a {
           font-family: 'Open Sans', sans-serif;
           font-size: 1.8rem;
@@ -401,6 +427,14 @@ import $ from 'jquery';
           font-weight: 800;
           line-height: 1.5rem;
           margin:0;
+          display: inline-block;
+          overflow: hidden;
+
+          .logo-letter {
+            display: inline-block;
+            color: #5bcf1c;
+            font-size: 24px;
+          }
 
         }
 
@@ -413,6 +447,20 @@ import $ from 'jquery';
 
       }
 
+	}
+
+	.slide-up-enter-active {
+	  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); // Bouncy easing
+	}
+
+	.slide-up-enter-from {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+
+	.slide-up-enter-to {
+	  opacity: 1;
+	  transform: translateY(0);
 	}
 
 
