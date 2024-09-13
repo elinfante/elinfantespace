@@ -58,6 +58,7 @@ import $ from 'jquery';
 			ring : null,
 	  		progressInterrupted: false,
 	  		delayTimer: null,
+	  		preloadedImages: [],
 	  	}
 	  },
 	  watch: {
@@ -72,6 +73,7 @@ import $ from 'jquery';
 			this.createAvatar();
 	  	}
 	  	this.onWindowScroll();
+	  	this.preloadAvatars();
 	  },
 	  beforeUnmount: function() {
 	    // Clean up any ongoing animations or timers
@@ -88,6 +90,12 @@ import $ from 'jquery';
 	  	loadAvatarImage : function (d3SVG) {
 			this.currentAvatar = (this.currentAvatar % this.numAvatars) + 1;
 			var urlImage = `/assets/img/avatars/avatar${this.currentAvatar}.jpg`;
+
+			// Use the preloaded image if available
+			const preloadedImage = this.preloadedImages[this.currentAvatar - 1];
+			if (preloadedImage && preloadedImage.complete) {
+				urlImage = preloadedImage.src;
+			}
 
 			if (!this.circleMask) {
 				this.circleMask = d3SVG.append("clipPath")
@@ -240,6 +248,13 @@ import $ from 'jquery';
 				headerSticky.animate({left: pageOffset}, 0);
 
 			});
+	  	},
+	  	preloadAvatars: function() {
+	  		for (let i = 1; i <= this.numAvatars; i++) {
+	  			const img = new Image();
+	  			img.src = `/assets/img/avatars/avatar${i}.jpg`;
+	  			this.preloadedImages.push(img);
+	  		}
 	  	}
 	  }
 	}
