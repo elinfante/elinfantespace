@@ -29,7 +29,10 @@
         >
           <i class="fa-solid fa-quote-left"></i>
           <div v-show="showMessage" class="message-box">
-            Hello, this is a test to see if it works
+            <i class="fa-solid fa-quote-left fa-1x"></i>
+            This is where I have display the quote from the Client. In this case... Richard Phibbs
+            <i class="fa-solid fa-quote-right fa-1x"></i>
+            <div class="mt-2 fw-bold small">by Richard Phibbs</div>
           </div>
         </div>
         <img v-on:click="gotoProject(id)" :src="this.thumbURL" width="100%" />
@@ -353,7 +356,7 @@ span.num {
     z-index: 1;
     cursor: pointer;
 
-    i {
+    >i {
       position: absolute;
       top: -60px;
       left: 10px;
