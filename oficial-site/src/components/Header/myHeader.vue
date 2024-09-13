@@ -21,7 +21,7 @@
 	                </span>
 	              </transition-group>
 	            </a>
-	            <h2 class="logo__subtitle">
+	            <h2 class="logo__subtitle mt-1">
 	              <span v-for="(char, index) in subtitleText" :key="index" 
 	                    :class="['char', { 'visible': index < visibleChars }]">
 	                {{ char }}
@@ -69,8 +69,9 @@ import $ from 'jquery';
 	  		progressInterrupted: false,
 	  		delayTimer: null,
 	  		preloadedImages: [],
+	  		logoText: "El Infante",
 	  		logoLetters: [],
-	  		subtitleText: "Innovative Front-End Engineer | Web Specialist | AI Prompt Engineer",
+	  		subtitleText: "Front-End Magician | Web Specialist | AI Prompt Engineer",
 	  		visibleChars: 0,
 	  	}
 	  },
@@ -89,7 +90,6 @@ import $ from 'jquery';
 	  	this.onWindowScroll();
 	  	this.preloadAvatars();
 	  	this.animateLogoText();
-	  	this.animateSubtitle();
 	  },
 	  beforeUnmount: function() {
 	    // Clean up any ongoing animations or timers
@@ -274,13 +274,21 @@ import $ from 'jquery';
 	  	},
 	  	animateLogoText: function() {
 	  		console.log('Animating logo text');
-	  		const text = "El\u00A0Infante"; // Using non-breaking space
-	  		const letters = text.split('');
-	  		letters.forEach((letter, index) => {
-	  			setTimeout(() => {
-	  				this.logoLetters.push(letter === '\u00A0' ? '&nbsp;' : letter);
-	  			}, index * 75); // 150ms delay between each character, including space
-	  		});
+	  		const letters = this.logoText.split('');
+	  		let index = 0;
+	  		
+	  		const addNextLetter = () => {
+	  			if (index < letters.length) {
+	  				this.logoLetters.push(letters[index] === ' ' ? '&nbsp;' : letters[index]);
+	  				index++;
+	  				setTimeout(addNextLetter, 75); // Adjust timing as needed
+	  			} else {
+	  				// Logo animation complete, start subtitle animation
+	  				this.animateSubtitle();
+	  			}
+	  		};
+
+	  		addNextLetter();
 	  	},
 	  	animateSubtitle: function() {
 	  		const typeNextChar = () => {
@@ -459,7 +467,7 @@ import $ from 'jquery';
         .logo__subtitle {
           font-family: 'Open Sans', sans-serif;
           font-size: 1rem;
-          line-height: 1rem;
+          line-height: 1.2rem;
           font-weight: 300;
           overflow: hidden;
           white-space: nowrap;
