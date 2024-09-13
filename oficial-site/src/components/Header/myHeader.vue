@@ -15,7 +15,7 @@
 	            </a>
 	          </div>
 	          <div class="logo__text">
-	            <a href="/" ref="logoText" class="logo-link">
+	            <a href="/" ref="logoText" class="logo-link logo-text-container">
 	              <transition-group name="slide-up" tag="span">
 	                <span v-for="(letter, index) in logoLetters" :key="index" class="logo-letter" v-html="letter">
 	                </span>
@@ -71,7 +71,7 @@ import $ from 'jquery';
 	  		preloadedImages: [],
 	  		logoText: "El Infante",
 	  		logoLetters: [],
-	  		subtitleText: "Front-End Magician | Web Specialist | AI Prompt Engineer",
+	  		subtitleText: "Innovative Front-End Engineer | Web Specialist | AI Prompt Engineer",
 	  		visibleChars: 0,
 	  	}
 	  },
@@ -438,15 +438,7 @@ import $ from 'jquery';
       .logo__text{
         margin-left:10px;
 
-        .logo-link {
-          display: inline-block;
-          overflow: hidden;
-          text-decoration: none;
-          color: inherit;
-          white-space: nowrap; // Ensure the text stays on one line
-        }
-
-        a {
+        .logo-text-container {
           font-family: 'Open Sans', sans-serif;
           font-size: 1.8rem;
           font-style: normal;
@@ -461,7 +453,6 @@ import $ from 'jquery';
             color: #5bcf1c;
             font-size: 24px;
           }
-
         }
 
         .logo__subtitle {
@@ -472,6 +463,8 @@ import $ from 'jquery';
           overflow: hidden;
           white-space: nowrap;
           color: #2d3e51;
+          margin-top: -3px !important;
+          position: relative;
 
           .char {
             opacity: 0;
@@ -499,6 +492,10 @@ import $ from 'jquery';
 	.slide-up-enter-to {
 	  opacity: 1;
 	  transform: translateY(0);
+	}
+
+	.mt-1 {
+	  margin-top: 0 !important;
 	}
 
 
