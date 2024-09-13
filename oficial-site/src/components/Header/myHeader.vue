@@ -71,7 +71,7 @@ import $ from 'jquery';
 	  		preloadedImages: [],
 	  		logoText: "El Infante",
 	  		logoLetters: [],
-	  		subtitleText: "Innovative Front-End Engineer | Web Specialist | AI Prompt Engineer",
+	  		subtitleText: "Front-End Magician | Web Specialist | AI Prompt Engineer",
 	  		visibleChars: 0,
 	  	}
 	  },
