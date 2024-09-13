@@ -21,7 +21,12 @@
 	                </span>
 	              </transition-group>
 	            </a>
-	            <h2 class="logo__subtitle mt-1">Innovative <strong>Front-End Engineer</strong> | Web Specialist | <strong>AI Prompt Engineer</strong></h2>
+	            <h2 class="logo__subtitle">
+	              <span v-for="(char, index) in subtitleText" :key="index" 
+	                    :class="['char', { 'visible': index < visibleChars }]">
+	                {{ char }}
+	              </span>
+	            </h2>
 	          </div>
 	        </div>
 
@@ -65,6 +70,8 @@ import $ from 'jquery';
 	  		delayTimer: null,
 	  		preloadedImages: [],
 	  		logoLetters: [],
+	  		subtitleText: "Innovative Front-End Engineer | Web Specialist | AI Prompt Engineer",
+	  		visibleChars: 0,
 	  	}
 	  },
 	  watch: {
@@ -82,6 +89,7 @@ import $ from 'jquery';
 	  	this.onWindowScroll();
 	  	this.preloadAvatars();
 	  	this.animateLogoText();
+	  	this.animateSubtitle();
 	  },
 	  beforeUnmount: function() {
 	    // Clean up any ongoing animations or timers
@@ -273,6 +281,16 @@ import $ from 'jquery';
 	  				this.logoLetters.push(letter === '\u00A0' ? '&nbsp;' : letter);
 	  			}, index * 75); // 150ms delay between each character, including space
 	  		});
+	  	},
+	  	animateSubtitle: function() {
+	  		const typeNextChar = () => {
+	  			if (this.visibleChars < this.subtitleText.length) {
+	  				this.visibleChars++;
+	  				setTimeout(typeNextChar, 50); // Adjust typing speed here
+	  			}
+	  		};
+
+	  		typeNextChar();
 	  	}
 	  }
 	}
@@ -441,8 +459,20 @@ import $ from 'jquery';
         .logo__subtitle {
           font-family: 'Open Sans', sans-serif;
           font-size: 1rem;
-          line-height: 0.5rem;
-          font-weight:300;
+          line-height: 1rem;
+          font-weight: 300;
+          overflow: hidden;
+          white-space: nowrap;
+          color: #2d3e51;
+
+          .char {
+            opacity: 0;
+            transition: opacity 0.1s ease-in-out;
+
+            &.visible {
+              opacity: 1;
+            }
+          }
         }
 
       }
