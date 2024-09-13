@@ -23,8 +23,9 @@
       <div class="img_holder">
         <div
           class="ribbon"
-          @mouseenter="showMessage = true"
-          @mouseleave="showMessage = false"
+          @mouseenter="activateRibbon"
+          @mouseleave="deactivateRibbon"
+          @click="toggleRibbon"
         >
           <i class="fa-solid fa-quote-left"></i>
           <div v-show="showMessage" class="message-box">
@@ -72,6 +73,8 @@ export default {
       url: this.projectMO.url,
       client: this.projectMO.client,
       showMessage: false,
+      isMobile: false,
+      ribbonClicked: false,
     };
   },
   computed: {
@@ -85,8 +88,13 @@ export default {
       return arraySkills;
     },
   },
-  mounted() {},
-  updated() {},
+  mounted() {
+    this.checkMobile();
+    window.addEventListener('resize', this.checkMobile);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.checkMobile);
+  },
   methods: {
     nextThumb: function (e) {
       e.preventDefault();
@@ -107,6 +115,27 @@ export default {
     },
     gotoProject: function (id) {
       this.$router.push({ path: "/projects/" + id });
+    },
+    checkMobile() {
+      this.isMobile = window.innerWidth <= 850;
+    },
+    activateRibbon() {
+      if (!this.isMobile) {
+        this.showMessage = true;
+      }
+    },
+    deactivateRibbon() {
+      if (!this.isMobile) {
+        this.showMessage = false;
+      }
+    },
+    toggleRibbon() {
+      if (this.ribbonClicked) {
+        this.showMessage = !this.showMessage;
+      } else {
+        this.showMessage = true;
+        this.ribbonClicked = true;
+      }
     },
   },
 };
@@ -322,6 +351,7 @@ span.num {
     border-width: 70px 70px 0 0; // Increased from 50px to 70px
     border-color: #fff transparent transparent transparent;
     z-index: 1;
+    cursor: pointer;
 
     i {
       position: absolute;
