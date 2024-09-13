@@ -16,12 +16,12 @@
 	          </div>
 	          <div class="logo__text">
 	            <a href="/">El Infante</a>
-	            <h2 class="logo__subtitle mt-1">Front End Developer and Web Designer</h2>
+	            <h2 class="logo__subtitle mt-1">Front End Engineer and Web Design Specialist</h2>
 	          </div>
 	        </div>
 
 	        <div class="menu-trigger closed" title="Toggle the sidebar navigation menu">
-	          <span>MENU</span>
+	          <!-- <span>MENU</span> -->
 	          <button v-on:click="clickMenu" type="button">
 	            <img class="menu-trigger-open" src="/assets/img/menu-icon.svg" width="30" height="30" alt="Open Menu">
 	            <img class="menu-trigger-close" src="/assets/img/close.svg" width="30" height="30"  alt="Close Menu">

@@ -67,10 +67,10 @@
 	  				name : "About Me",
 	  				route : "/aboutme",
 	  			},
-	  			{
-	  				name : "Framing",
-	  				route : "/framing",
-	  			},
+	  			// {
+	  			// 	name : "Framing",
+	  			// 	route : "/framing",
+	  			// },
 	  		],
 	  		socialOptions : [
 	  			{
