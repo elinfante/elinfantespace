@@ -477,7 +477,7 @@ span.num {
   .message-box {
     top: 40px !important;
     left: 40px !important;
-    font-size: 0.6rem !important;
+    font-size: 0.7rem !important;
     width: 85% !important;
 
     h3 {
