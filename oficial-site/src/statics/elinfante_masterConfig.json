@@ -30,7 +30,8 @@
           "client" : "Buzz Radar Ltd.",
           "client_url" : "http://www.buzzradar.com/",
           "date" : "01/12/2023",
-          "quote": false
+          "quote": false,
+          "currentJob": true
         },
         {
           "pos" : 0,

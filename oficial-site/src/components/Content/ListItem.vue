@@ -21,29 +21,46 @@
 
     <div class="project__img">
       <div class="img_holder">
-        <!-- This is the ribbon that shows the quote -->
+        <!-- This is the ribbon that shows the quote / CURRENT JOB -->
         <div
-          v-if="this.projectMO.quote"
+          v-if="this.projectMO.quote || this.projectMO.currentJob"
           class="ribbon"
           @mouseenter="activateRibbon"
           @mouseleave="deactivateRibbon"
           @click="toggleRibbon"
+          :class="{ 'border-color-yellow': this.projectMO.currentJob }"
         >
-          <i class="fa-solid fa-quote-left fa-1x"></i>
+          <i v-if="this.projectMO.quote != false" class="fa-solid fa-quote-left rotate fa-1x"></i>
+          <i v-if="this.projectMO.currentJob" class="fa-solid fa-star fa-1x"></i>
         </div>
-        <!-- This is the ribbon that shows the quote -->
+        <!-- This is the ribbon that shows the quote / CURRENT JOB -->
 
         <div
-          v-if="this.projectMO.quote"
+          v-if="this.projectMO.quote || this.projectMO.currentJob"
           v-show="showMessage"
           class="message-box"
+          :class="{ 'text-center': this.projectMO.currentJob, 'fw-bolder': this.projectMO.currentJob, 'bg-yellow': this.projectMO.currentJob }"
         >
-          <i class="fa-solid fa-quote-left fa-1x"></i>
-          {{ this.projectMO.quote.text }}
-          <i class="fa-solid fa-quote-right fa-1x"></i>
-          <div class="mt-4 fw-bolder small">
-            by {{ this.projectMO.quote.author }}
-          </div>
+          <!-- This displays the quote if there is one -->
+          <span v-if="this.projectMO.quote">
+            <i class="fa-solid fa-quote-left fa-1x"></i>
+            {{ this.projectMO.quote.text }}
+            <i class="fa-solid fa-quote-right fa-1x"></i>
+            <div class="mt-4 fw-bolder small">
+              by {{ this.projectMO.quote.author }}
+            </div>
+          </span>
+          <!-- This displays the quote if there is one -->
+
+          <!-- This displays the current job if there is one -->
+          <span v-if="this.projectMO.currentJob">
+            <h3>Buzz Radar, current Employer</h3>
+            <p>
+              Take the guesswork out of your toughest marketing decisions with Buzz Radar. Our next generation AI analyses billions of online conversations to reveal deep insights about your audience. We combine this with human expertise from our team of analysts, data scientists, and strategists to provide data driven social intelligence that supercharges growth.
+            </p>
+          </span>
+          <!-- This displays the current job if there is one -->
+
         </div>
 
         <img v-on:click="gotoProject(id)" :src="this.thumbURL" width="100%" />
@@ -367,13 +384,20 @@ span.num {
     z-index: 1;
     cursor: pointer;
 
+    &.border-color-yellow {
+      border-color: #e6c200 transparent transparent transparent;
+    }
+
     > i {
       position: absolute;
       top: -60px;
       left: 10px;
       color: #000; // Adjust color as needed
       font-size: 24px; // Adjust size as needed
-      transform: rotate(-45deg);
+
+      &.rotate {
+        transform: rotate(-45deg);
+      }
     }
   }
 
@@ -381,7 +405,7 @@ span.num {
     position: absolute;
     top: 60px;
     left: 60px;
-    background-color: rgba(255, 255, 255, 0.9); // White with 70% opacity
+    background-color: rgba(255, 255, 255, 0.95); // White with 70% opacity
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -391,6 +415,10 @@ span.num {
     animation: bounceIn 0.5s;
     font-size: 1rem;
     color: black; // Ensure text remains fully opaque
+
+    &.bg-yellow {
+      background-color: rgba(230, 194, 0, 0.95); 
+    }
   }
 }
 
