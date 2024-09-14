@@ -280,7 +280,7 @@ import $ from 'jquery';
 	  			if (index < letters.length) {
 	  				this.logoLetters.push(letters[index] === ' ' ? '&nbsp;' : letters[index]);
 	  				index++;
-	  				setTimeout(addNextLetter, 75); // Adjust timing as needed
+	  				setTimeout(addNextLetter, 40); // Adjust timing as needed
 	  			} else {
 	  				// Logo animation complete, start subtitle animation
 	  				this.animateSubtitle();
@@ -293,7 +293,7 @@ import $ from 'jquery';
 	  		const typeNextChar = () => {
 	  			if (this.visibleChars < this.subtitleText.length) {
 	  				this.visibleChars++;
-	  				setTimeout(typeNextChar, 50); // Adjust typing speed here
+	  				setTimeout(typeNextChar, 20); // Adjust typing speed here
 	  			}
 	  		};
 
