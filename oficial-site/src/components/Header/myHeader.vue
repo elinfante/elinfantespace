@@ -1,577 +1,616 @@
 /* eslint-disable */
 
 <template>
-  <div>
-    <header>
-      <div class="logo">
-        <div>
-          <a href="/">
-            <div class="avatar__holder">
-              <svg width="80" height="80"></svg>
-            </div>
-          </a>
-        </div>
-        <div class="logo__text">
-          <a href="/" ref="logoText" class="logo-link logo-text-container">
-            <transition-group name="slide-up" tag="span">
-              <span
-                v-for="(letter, index) in logoLetters"
-                :key="index"
-                class="logo-letter"
-                v-html="letter"
-              >
-              </span>
-            </transition-group>
-          </a>
-          <h2 class="logo__subtitle mt-1">
-            <span
-              v-for="(char, index) in subtitleText"
-              :key="index"
-              :class="['char', { visible: index < visibleChars }]"
-            >
-              {{ char }}
-            </span>
-          </h2>
-        </div>
-      </div>
 
-      <div
-        class="menu-trigger closed"
-        title="Toggle the sidebar navigation menu"
-      >
-        <!-- <span>MENU</span> -->
-        <button v-on:click="clickMenu" type="button">
-          <img
-            class="menu-trigger-open"
-            src="/assets/img/menu-icon.svg"
-            width="30"
-            height="30"
-            alt="Open Menu"
-          />
-          <img
-            class="menu-trigger-close"
-            src="/assets/img/close.svg"
-            width="30"
-            height="30"
-            alt="Close Menu"
-          />
-        </button>
-      </div>
-    </header>
-  </div>
+	<div>
+	 	
+	 	<header>
+	 	
+	 		<div class="logo">
+	          <div>
+	            <a href="/">
+	              <div class="avatar__holder">
+	              	<svg width="80" height="80"></svg>
+	              </div>
+	            </a>
+	          </div>
+	          <div class="logo__text">
+	            <a href="/" ref="logoText" class="logo-link logo-text-container">
+	              <transition-group name="slide-up" tag="span">
+	                <span v-for="(letter, index) in logoLetters" :key="index" class="logo-letter" v-html="letter">
+	                </span>
+	              </transition-group>
+	            </a>
+	            <h2 class="logo__subtitle mt-1">
+	              <span v-for="(char, index) in subtitleText" :key="index" 
+	                    :class="['char', { 'visible': index < visibleChars }]">
+	                {{ char }}
+	              </span>
+	            </h2>
+	          </div>
+	        </div>
+
+	        <div class="menu-trigger closed" title="Toggle the sidebar navigation menu">
+	          <!-- <span>MENU</span> -->
+	          <button v-on:click="clickMenu" type="button">
+	            <img class="menu-trigger-open" src="/assets/img/menu-icon.svg" width="30" height="30" alt="Open Menu">
+	            <img class="menu-trigger-close" src="/assets/img/close.svg" width="30" height="30"  alt="Close Menu">
+	          </button>
+	        </div>
+
+	 	</header>
+
+	</div>
+
 </template>
 
+
+
+
+
+
+
 <script>
-import * as d3 from "d3";
-import $ from "jquery";
 
-export default {
-  name: "myHeader",
-  data: function () {
-    return {
-      svgContainer: null,
-      progressColor: "#5bcf1c",
-      currentAvatar: 0,
-      numAvatars: 5,
-      circleMask: null,
-      avatar: null,
-      ring: null,
-      progressInterrupted: false,
-      delayTimer: null,
-      preloadedImages: [],
-      logoText: "El Infante",
-      logoLetters: [],
-      subtitleText: "Front-End Magician | Web Specialist | AI Prompt Engineer",
-      visibleChars: 0,
-    };
-  },
-  watch: {},
-  mounted: function () {
-    this.$router.beforeEach((to, from, next) => {
-      this.closeMenu();
-      next();
-    });
-    if (!this.svgContainer) {
-      this.createAvatar();
-    }
-    this.onWindowScroll();
-    this.preloadAvatars();
-    this.animateLogoText();
-  },
-  beforeUnmount: function () {
-    // Clean up any ongoing animations or timers
-    this.progressInterrupted = true;
-    if (this.delayTimer) {
-      clearTimeout(this.delayTimer);
-    }
-  },
-  methods: {
-    createAvatar: function () {
-      const svg = d3.select("svg");
-      this.loadAvatarImage(svg);
-    },
-    loadAvatarImage: function (d3SVG) {
-      this.currentAvatar = (this.currentAvatar % this.numAvatars) + 1;
-      var urlImage = `/assets/img/avatars/avatar${this.currentAvatar}.jpg`;
+import * as d3 from 'd3';
+import $ from 'jquery';
 
-      // Use the preloaded image if available
-      const preloadedImage = this.preloadedImages[this.currentAvatar - 1];
-      if (preloadedImage && preloadedImage.complete) {
-        urlImage = preloadedImage.src;
-      }
+	export default {
+	  name: 'myHeader',
+	  data : function() {
+	  	return {
+	  		svgContainer : null,
+	  		progressColor : '#5bcf1c',
+	  		currentAvatar : 0,
+	  		numAvatars : 5,
+	  		circleMask : null,
+	  		avatar : null,
+			ring : null,
+	  		progressInterrupted: false,
+	  		delayTimer: null,
+	  		preloadedImages: [],
+	  		logoText: "El Infante",
+	  		logoLetters: [],
+	  		subtitleText: "Front-End Magician | Web Specialist | AI Prompt Engineer",
+	  		visibleChars: 0,
+	  	}
+	  },
+	  watch: {
 
-      if (!this.circleMask) {
-        this.circleMask = d3SVG
-          .append("clipPath")
-          .attr("id", "mask-circle")
-          .append("circle")
-          .attr("cx", 40)
-          .attr("cy", 40)
-          .attr("r", 37.5) // (80 - 5) / 2
-          .style("fill", "#ff0000");
-      }
+	  },
+	  mounted: function(){
+	  	this.$router.beforeEach((to, from, next) => {
+	  		this.closeMenu();
+	  		next();
+		});
+	  	if (!this.svgContainer) {
+			this.createAvatar();
+	  	}
+	  	this.onWindowScroll();
+	  	this.preloadAvatars();
+	  	this.animateLogoText();
+	  },
+	  beforeUnmount: function() {
+	    // Clean up any ongoing animations or timers
+	    this.progressInterrupted = true;
+	    if (this.delayTimer) {
+	      clearTimeout(this.delayTimer);
+	    }
+	  },
+	  methods : {
+	  	createAvatar : function() {
+	  		const svg = d3.select('svg');
+	  		this.loadAvatarImage(svg);
+	  	}, 
+	  	loadAvatarImage : function (d3SVG) {
+			this.currentAvatar = (this.currentAvatar % this.numAvatars) + 1;
+			var urlImage = `/assets/img/avatars/avatar${this.currentAvatar}.jpg`;
 
-      if (!this.avatar) {
-        this.avatar = d3SVG
-          .append("image")
-          .attr("xlink:href", urlImage)
-          .attr("width", 80)
-          .attr("height", 80)
-          .attr("clip-path", "url(#mask-circle)");
+			// Use the preloaded image if available
+			const preloadedImage = this.preloadedImages[this.currentAvatar - 1];
+			if (preloadedImage && preloadedImage.complete) {
+				urlImage = preloadedImage.src;
+			}
 
-        if (!this.ring) {
-          this.ring = d3SVG
-            .append("circle")
-            .attr("cx", 40)
-            .attr("cy", 40)
-            .attr("r", 37.5) // (80 - 5) / 2
-            .style("fill", "none")
-            .style("stroke", this.progressColor)
-            .style("stroke-width", 5) // Updated to 5px
-            .style("stroke-dasharray", "0 235.62"); // 2 * PI * 37.5
-        }
-      } else {
-        // Fade out current avatar
-        this.avatar
-          .transition()
-          .duration(500)
-          .style("opacity", 0)
-          .on("end", () => {
-            // Update image and fade in
-            this.avatar
-              .attr("xlink:href", urlImage)
-              .transition()
-              .duration(500)
-              .style("opacity", 1);
-          });
-      }
+			if (!this.circleMask) {
+				this.circleMask = d3SVG.append("clipPath")
+					.attr("id", "mask-circle")
+					.append("circle")
+					.attr("cx", 40)
+					.attr("cy", 40)
+					.attr("r", 37.5)  // (80 - 5) / 2
+					.style("fill", "#ff0000");
+			}
 
-      // Interrupt any ongoing animation or delay
-      this.progressInterrupted = true;
-      if (this.delayTimer) {
-        clearTimeout(this.delayTimer);
-      }
+			if (!this.avatar) {
+				this.avatar = d3SVG.append("image")
+					.attr("xlink:href", urlImage)
+					.attr("width", 80)
+					.attr("height", 80)
+					.attr("clip-path", "url(#mask-circle)")
 
-      // Start the progress animation
-      this.startProgressAnimation();
-    },
-    loadProgress: function (d3SVG) {
-      // This method is now empty as we've moved the progress logic to startProgressAnimation
-    },
-    startProgressAnimation: function () {
-      // Reset the interrupted flag
-      this.progressInterrupted = false;
+				if (!this.ring) {
+					this.ring = d3SVG.append("circle")
+						.attr("cx", 40)
+						.attr("cy", 40)
+						.attr("r", 37.5)  // (80 - 5) / 2
+						.style("fill", "none")
+						.style("stroke", this.progressColor)
+						.style("stroke-width", 5)  // Updated to 5px
+						.style("stroke-dasharray", "0 235.62")  // 2 * PI * 37.5
+				}
+			} else {
+				// Fade out current avatar
+				this.avatar.transition()
+					.duration(500)
+					.style("opacity", 0)
+					.on("end", () => {
+						// Update image and fade in
+						this.avatar.attr("xlink:href", urlImage)
+							.transition()
+							.duration(500)
+							.style("opacity", 1);
+					});
+			}
 
-      const animationDuration = 1000; // 1 second
-      const startTime = Date.now();
+			// Interrupt any ongoing animation or delay
+			this.progressInterrupted = true;
+			if (this.delayTimer) {
+				clearTimeout(this.delayTimer);
+			}
 
-      const animate = () => {
-        if (this.progressInterrupted) return;
+			// Start the progress animation
+			this.startProgressAnimation();
+	  	},
+	  	loadProgress : function (d3SVG) {
+	  		// This method is now empty as we've moved the progress logic to startProgressAnimation
+	  	},
+	  	startProgressAnimation: function() {
+	  		// Reset the interrupted flag
+	  		this.progressInterrupted = false;
 
-        const elapsedTime = Date.now() - startTime;
-        const progress = Math.min(elapsedTime / animationDuration, 1);
+	  		const animationDuration = 1000; // 1 second
+	  		const startTime = Date.now();
 
-        const dashArray = progress * 235.62; // 2 * PI * 37.5
-        this.ring.style("stroke-dasharray", `${dashArray} 235.62`);
+	  		const animate = () => {
+	  			if (this.progressInterrupted) return;
 
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        } else {
-          // Animation completed, wait for 3 seconds before loading next avatar
-          this.delayTimer = setTimeout(() => {
-            if (!this.progressInterrupted) {
-              this.loadAvatarImage(d3.select("svg"));
-            }
-          }, 3000);
-        }
-      };
+	  			const elapsedTime = Date.now() - startTime;
+	  			const progress = Math.min(elapsedTime / animationDuration, 1);
+	  			
+	  			const dashArray = progress * 235.62;  // 2 * PI * 37.5
+	  			this.ring.style("stroke-dasharray", `${dashArray} 235.62`);
 
-      requestAnimationFrame(animate);
-    },
-    clickMenu: function () {
-      let page = $(".page");
-      let menu = $(".menu");
-      let menuTrigger = $(".menu-trigger");
-      let header = $("header");
-      let headerSticky = $(".header--sticky");
+	  			if (progress < 1) {
+	  				requestAnimationFrame(animate);
+	  			} else {
+	  				// Animation completed, wait for 3 seconds before loading next avatar
+	  				this.delayTimer = setTimeout(() => {
+	  					if (!this.progressInterrupted) {
+	  						this.loadAvatarImage(d3.select('svg'));
+	  					}
+	  				}, 3000);
+	  			}
+	  		};
 
-      if (menuTrigger.hasClass("opened")) {
-        menuTrigger.removeClass("opened").addClass("closed");
-        page.animate({ left: "0px" }, 300);
-        headerSticky.animate({ left: "0px" }, 300);
-        menu.animate({ right: "-200px" }, 300);
-        menuTrigger.find("span").html("MENU");
-        self.menuOpened = false;
-      } else {
-        menuTrigger.removeClass("closed").addClass("opened");
-        page.animate({ left: "-200px" }, 300);
-        headerSticky.animate({ left: "-200px" }, 300);
-        menu.animate({ right: "0px" }, 300);
-        menuTrigger.find("span").html("CLOSE MENU");
-        self.menuOpened = true;
-      }
+	  		requestAnimationFrame(animate);
+	  	},
+	  	clickMenu : function() {
+	  		let page = $('.page');
+			let menu = $('.menu');
+			let menuTrigger = $('.menu-trigger');
+			let header = $('header');
+			let headerSticky = $('.header--sticky');
+			
+			if (menuTrigger.hasClass('opened')) {
+				menuTrigger.removeClass('opened').addClass('closed');
+				page.animate({left: "0px"}, 300);
+				headerSticky.animate({left: "0px"}, 300);
+				menu.animate({right: "-200px"}, 300);
+				menuTrigger.find('span').html('MENU');
+				self.menuOpened = false;
+			}else{
+				menuTrigger.removeClass('closed').addClass('opened');
+				page.animate({left: "-200px"}, 300);
+				headerSticky.animate({left: "-200px"}, 300);
+				menu.animate({right: "0px"}, 300);
+				menuTrigger.find('span').html('CLOSE MENU');
+				self.menuOpened = true;
+			}
 
-      $("img.menu-trigger-open").toggle();
-      $("img.menu-trigger-close").toggle();
-    },
-    closeMenu: function () {
-      let page = $(".page");
-      let menu = $(".menu");
-      let menuTrigger = $(".menu-trigger");
-      let header = $("header");
-      let headerSticky = $(".header--sticky");
+			$('img.menu-trigger-open').toggle();
+			$('img.menu-trigger-close').toggle();
 
-      menuTrigger.removeClass("opened").addClass("closed");
-      page.animate({ left: "0px" }, 300);
-      headerSticky.animate({ left: "0px" }, 300);
-      menu.animate({ right: "-200px" }, 300);
-      menuTrigger.find("span").html("MENU");
-      self.menuOpened = false;
+	  	},
+	  	closeMenu: function() {
+	  		let page = $('.page');
+			let menu = $('.menu');
+			let menuTrigger = $('.menu-trigger');
+			let header = $('header');
+			let headerSticky = $('.header--sticky');
 
-      $("img.menu-trigger-open").show();
-      $("img.menu-trigger-close").hide();
-    },
-    onWindowScroll: function () {
-      let page = $(".page");
-      let menu = $(".menu");
-      let header = $("header");
-      let navBtn = $(".menu-trigger button");
-      let self = this;
+	  		menuTrigger.removeClass('opened').addClass('closed');
+			page.animate({left: "0px"}, 300);
+			headerSticky.animate({left: "0px"}, 300);
+			menu.animate({right: "-200px"}, 300);
+			menuTrigger.find('span').html('MENU');
+			self.menuOpened = false;
 
-      //To show/hide fixed header when scrolling
-      let navOffsetWhenScroll = 130;
-      $(window).on("scroll", function (e) {
-        let pageOffset = page.offset().left;
-        let headerSticky = $(".header--sticky");
+			$('img.menu-trigger-open').show();
+			$('img.menu-trigger-close').hide();
+	  	},
+	  	onWindowScroll : function() {
+	  		let page = $('.page');
+			let menu = $('.menu');
+			let header = $('header');
+			let navBtn = $('.menu-trigger button');
+			let self = this;
 
-        if ($(this).scrollTop() > navOffsetWhenScroll) {
-          header.addClass("header--sticky");
-          setTimeout(function () {
-            header.addClass("animIn");
-          }, 0);
-        } else {
-          header.removeClass("header--sticky animIn");
-        }
-        headerSticky.animate({ left: pageOffset }, 0);
-      });
-    },
-    preloadAvatars: function () {
-      for (let i = 1; i <= this.numAvatars; i++) {
-        const img = new Image();
-        img.src = `/assets/img/avatars/avatar${i}.jpg`;
-        this.preloadedImages.push(img);
-      }
-    },
-    animateLogoText: function () {
-      //console.log('Animating logo text');
-      const letters = this.logoText.split("");
-      let index = 0;
+			//To show/hide fixed header when scrolling
+			let navOffsetWhenScroll = 130;
+			$(window).on("scroll", function(e) {
+				let pageOffset = page.offset().left;
+				let headerSticky = $('.header--sticky');
 
-      const addNextLetter = () => {
-        if (index < letters.length) {
-          this.logoLetters.push(
-            letters[index] === " " ? "&nbsp;" : letters[index]
-          );
-          index++;
-          setTimeout(addNextLetter, 40); // Adjust timing as needed
-        } else {
-          // Logo animation complete, start subtitle animation
-          this.animateSubtitle();
-        }
-      };
+				if ($(this).scrollTop() > navOffsetWhenScroll) {
+					header.addClass("header--sticky");
+					setTimeout(function() {
+						header.addClass("animIn");
+					}, 0);
+				} else {
+					header.removeClass("header--sticky animIn");
+				}
+				headerSticky.animate({left: pageOffset}, 0);
 
-      addNextLetter();
-    },
-    animateSubtitle: function () {
-      const typeNextChar = () => {
-        if (this.visibleChars < this.subtitleText.length) {
-          this.visibleChars++;
-          setTimeout(typeNextChar, 20); // Adjust typing speed here
-        }
-      };
+			});
+	  	},
+	  	preloadAvatars: function() {
+	  		for (let i = 1; i <= this.numAvatars; i++) {
+	  			const img = new Image();
+	  			img.src = `/assets/img/avatars/avatar${i}.jpg`;
+	  			this.preloadedImages.push(img);
+	  		}
+	  	},
+	  	animateLogoText: function() {
+	  		//console.log('Animating logo text');
+	  		const letters = this.logoText.split('');
+	  		let index = 0;
+	  		
+	  		const addNextLetter = () => {
+	  			if (index < letters.length) {
+	  				this.logoLetters.push(letters[index] === ' ' ? '&nbsp;' : letters[index]);
+	  				index++;
+	  				setTimeout(addNextLetter, 40); // Adjust timing as needed
+	  			} else {
+	  				// Logo animation complete, start subtitle animation
+	  				this.animateSubtitle();
+	  			}
+	  		};
 
-      typeNextChar();
-    },
-  },
-};
+	  		addNextLetter();
+	  	},
+	  	animateSubtitle: function() {
+	  		const typeNextChar = () => {
+	  			if (this.visibleChars < this.subtitleText.length) {
+	  				this.visibleChars++;
+	  				setTimeout(typeNextChar, 20); // Adjust typing speed here
+	  			}
+	  		};
+
+	  		typeNextChar();
+	  	}
+	  }
+	}
+
 </script>
 
+
+
+
+
+
+
+
 <style lang="scss" scoped>
-@mixin align-items($alignment) {
-  align-items: $alignment;
-}
 
-@mixin display-flex() {
-  display: flex;
-}
+	@mixin align-items($alignment) {
+		align-items: $alignment;
+	}
 
-@mixin justify-content($value) {
-  justify-content: $value;
-}
+	@mixin display-flex() {
+		display: flex;
+	}
 
-@mixin transform($value) {
-  transform: $value;
-}
+	@mixin justify-content($value) {
+		justify-content: $value;
+	}
 
-@mixin transform-origin($x, $y) {
-  transform-origin: $x $y;
-}
+	@mixin transform($value) {
+		transform: $value;
+	}
 
-header {
-  background: white;
-  border-bottom: 1px solid #e7ebee;
-}
+	@mixin transform-origin($x, $y) {
+		transform-origin: $x $y;
+	}
 
-.menu-trigger {
-  @include align-items(center);
-  @include display-flex();
-  position: absolute;
-  top: 33px;
-  right: 30px;
+	header {
+		background:white;
+		border-bottom: 1px solid #e7ebee;
+	}
 
-  span {
-    font-size: 13px;
-    margin-right: 10px;
-  }
+	.menu-trigger {
+	      @include align-items(center);
+	      @include display-flex();
+	      position:absolute;
+	      top:33px;
+	      right:30px;
 
-  button {
-    border: 0;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-    display: block;
-    outline: 0;
+	      span{
+	        font-size:13px;
+	        margin-right:10px;
+	      }
 
-    img.menu-trigger-open {
-      display: block;
-    }
+	      button {
+	          border: 0;
+	          background: transparent;
+	          padding: 0;
+	          cursor: pointer;
+	          display: block;
+	          outline: 0;  
 
-    img.menu-trigger-close {
-      display: none;
-    }
-  }
-}
+	          img.menu-trigger-open {
+	              display:block;
+	          }
 
-.header--sticky {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid #e7ebee;
-  right: 0px;
-  max-width: 100%;
-  margin: 0;
-  padding: 0px;
-  position: fixed;
-  top: -200px;
-  width: 100%;
+	          img.menu-trigger-close {
+	              display:none;
+	          }
 
-  z-index: 9999;
+	      }
 
-  .menu-trigger {
-    top: 33px;
-    right: 30px;
-  }
+	  }
 
-  .logo {
-    padding: 10px;
+	  .header--sticky {
 
-    .logo__image {
-      width: 80px;
-      height: 80px;
-    }
-  }
-}
+	      background-color:rgba(255,255,255,0.8);
+	      border-bottom: 1px solid #e7ebee;
+	      right: 0px;
+	      max-width: 100%;
+	      margin: 0;
+	      padding: 0px;
+	      position: fixed;
+	      top: -200px;
+	      width: 100%; 
 
-.animIn {
-  -webkit-transition: top 0.5s ease-out;
-  -moz-transition: top 0.5s ease-out;
-  -o-transition: top 0.5s ease-out;
-  transition: top 0.5s ease-out;
+	      z-index:9999;
 
-  top: 0px;
-}
+	      .menu-trigger {
+	          top:33px;
+	          right:30px;
+	      }
 
-.logo {
-  @include align-items(center);
-  @include display-flex();
-  @include justify-content(left);
-  padding: 10px;
+	      .logo {
+	    
+	        padding:10px;
 
-  .logo__image {
-    display: block;
-    margin: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-  }
+	        .logo__image {
+	          width: 80px;
+	          height: 80px;
+	        }
 
-  .avatar__holder {
-    width: 80px;
-    height: 80px;
-    background: white;
-    @include transform(scale(1, 1));
-    animation: bounceIn 0.5s ease-in-out;
-  }
+	      }
 
-  .logo__text {
-    margin-left: 10px;
+	}
 
-    .logo-text-container {
-      font-family: "Open Sans", sans-serif;
-      font-size: 1.8rem;
-      font-style: normal;
-      font-weight: 800;
-      line-height: 1.5rem;
-      margin: 0;
-      display: inline-block;
-      overflow: hidden;
+	.animIn {
 
-      .logo-letter {
-        display: inline-block;
-        color: #5bcf1c;
-        font-size: 24px;
+	    -webkit-transition: top 0.5s ease-out;
+	    -moz-transition: top 0.5s ease-out;
+	    -o-transition: top 0.5s ease-out;
+	    transition: top 0.5s ease-out;
+
+	    top:0px;
+	}
+
+	.logo {
+      
+      @include align-items(center);
+      @include display-flex();
+      @include justify-content(left);
+      padding:10px;
+
+      .logo__image {
+        display: block;
+        margin: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
       }
-    }
 
-    .logo__subtitle {
-      font-family: "Open Sans", sans-serif;
-      font-size: 1rem;
-      line-height: 1.2rem;
-      font-weight: 300;
-      overflow: hidden;
-      white-space: nowrap;
-      color: #2d3e51;
-      margin-top: -3px !important;
-      position: relative;
+      .avatar__holder{
+        width: 80px;
+        height: 80px;
+        background:white;
+        @include transform(scale(1,1));
+      }
 
-      .char {
-        opacity: 0;
-        transition: opacity 0.1s ease-in-out;
+      .logo__text{
+        margin-left:10px;
 
-        &.visible {
-          opacity: 1;
+        .logo-text-container {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1.8rem;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 1.5rem;
+          margin:0;
+          display: inline-block;
+          overflow: hidden;
+
+          .logo-letter {
+            display: inline-block;
+            color: #5bcf1c;
+            font-size: 24px;
+          }
         }
+
+        .logo__subtitle {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1rem;
+          line-height: 1.2rem;
+          font-weight: 300;
+          overflow: hidden;
+          white-space: nowrap;
+          color: #2d3e51;
+          margin-top: -3px !important;
+          position: relative;
+
+          .char {
+            opacity: 0;
+            transition: opacity 0.1s ease-in-out;
+
+            &.visible {
+              opacity: 1;
+            }
+          }
+        }
+
       }
-    }
-  }
-}
 
-.slide-up-enter-active {
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); // Bouncy easing
-}
+	}
 
-.slide-up-enter-from {
-  opacity: 0;
-  transform: translateY(20px);
-}
+	.slide-up-enter-active {
+	  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); // Bouncy easing
+	}
 
-.slide-up-enter-to {
-  opacity: 1;
-  transform: translateY(0);
-}
+	.slide-up-enter-from {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
 
-.mt-1 {
-  margin-top: 0 !important;
-}
+	.slide-up-enter-to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width: 480px) {
-  .menu-trigger {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+	.mt-1 {
+	  margin-top: 0 !important;
+	}
 
-    span {
-      display: none;
-    }
-  }
 
-  .header--sticky {
+
+
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen and (max-width : 480px) {
+
+	  
+
     .menu-trigger {
-      top: 20px;
-      right: 20px;
+        position:absolute;
+        top:20px;
+        right:20px;
+
+        span {
+          display:none;
+        }
+    }
+  
+    .header--sticky {
+        .menu-trigger {
+            top:20px;
+            right:20px;
+        }
+
+        .logo {
+      
+          padding:10px;
+
+          .logo__image {
+            width: 50px;
+            height: 50px;
+          }
+
+          .avatar__holder{
+            width:50px;
+            height:50px;
+            @include transform(scale(0.625, 0.625)); // 50/80 = 0.625
+            @include transform-origin(0,0);
+          }
+
+        }
     }
 
     .logo {
-      padding: 10px;
+        
+        padding:10px;
 
-      .logo__image {
-        width: 50px;
-        height: 50px;
-      }
+        .logo__image {
+          width: 50px;
+          height: 50px;
+        }
 
-      .avatar__holder {
-        width: 50px;
-        height: 50px;
-        @include transform(scale(0.625, 0.625)); // 50/80 = 0.625
-        @include transform-origin(0, 0);
-      }
-    }
-  }
+        .avatar__holder{
+          width:50px;
+          height:50px;
+          @include transform(scale(0.625, 0.625)); // 50/80 = 0.625
+          @include transform-origin(0,0);
+        }
 
-  .logo {
-    padding: 10px;
+        .logo__text {
 
-    .logo__image {
-      width: 50px;
-      height: 50px;
-    }
+          .logo__title {
+            font-size:20px;
+          }
 
-    .avatar__holder {
-      width: 50px;
-      height: 50px;
-      @include transform(scale(0.625, 0.625)); // 50/80 = 0.625
-      @include transform-origin(0, 0);
+          .logo__subtitle {
+            display:none;
+          }
+
+        }
+
     }
 
-    .logo__text {
-      .logo__title {
-        font-size: 20px;
-      }
+	  
 
-      .logo__subtitle {
-        display: none;
-      }
-    }
-  }
 
-  .icons-list__item {
-    font-size: 1rem;
-  }
-}
+	  .icons-list__item {
+	    font-size:1rem;
+	  }
 
-@keyframes bounceIn {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  80% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
+
+	}
+
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
