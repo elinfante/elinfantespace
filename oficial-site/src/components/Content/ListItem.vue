@@ -46,7 +46,7 @@
             <i class="fa-solid fa-quote-left fa-1x"></i>
             {{ this.projectMO.quote.text }}
             <i class="fa-solid fa-quote-right fa-1x"></i>
-            <div class="mt-4 fw-bolder small">
+            <div class="mt-3 fw-bolder small">
               by {{ this.projectMO.quote.author }}
             </div>
           </span>
