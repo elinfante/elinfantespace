@@ -475,10 +475,10 @@ span.num {
 @media only screen and (max-width: 480px) {
   
   .message-box {
-    top: 40px !important;
-    left: 40px !important;
-    font-size: 0.7rem !important;
-    width: 85% !important;
+    top: 30px !important;
+    left: 30px !important;
+    font-size: 11px !important;
+    width: 88% !important;
 
     h3 {
       font-size: 1rem !important;
