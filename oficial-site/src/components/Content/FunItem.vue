@@ -18,7 +18,10 @@
         <div class="project__img">
             <!-- <div class="project__preloader__wrap"></div> -->
             <div v-if="this.type == 'img'" class="img_holder">
-              <img v-on:click="nextThumb" :src="this.thumbURL" width="100%"></img>  
+              <a v-if="this.funItemMO.video_restricted" :href="this.funItemMO.url" target="_blank">
+                <img :src="this.thumbURL" width="100%">
+              </a>
+              <img v-else v-on:click="nextThumb" :src="this.thumbURL" width="100%">
             </div>
             <div v-else class="video_holder">
               <iframe width="100%" :height="getIframeHeight()" :src="this.funItemMO.url" frameborder="0" allowfullscreen></iframe>

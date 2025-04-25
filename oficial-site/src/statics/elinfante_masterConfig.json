@@ -758,6 +758,16 @@
         {
           "pos" : 0,
           "type" : "img",
+          "url" : "https://www.youtube.com/watch?v=YiTA20fAquU",
+          "id" : 10,
+          "num_thumbs" : 1,
+          "name" : "Jesus & Pedro (Gran Hermano)",
+          "description" : "Video I made for a friend's wedding.",
+          "video_restricted" : true
+        },
+        {
+          "pos" : 0,
+          "type" : "img",
           "url" : false,
           "id" : 1,
           "num_thumbs" : 2,
@@ -772,6 +782,26 @@
           "num_thumbs" : 2,
           "name" : "Jesus & Pedro wedding invitation",
           "description" : "Wedding invitation for some clients."
+        },
+        {
+          "pos" : 0,
+          "type" : "img",
+          "url" : "https://www.youtube.com/watch?v=vK2aP5cad-A",
+          "id" : 11,
+          "num_thumbs" : 1,
+          "name" : "BBC News Special: Jone and Lee Wedding",
+          "description" : "Video I made for a friend's wedding.",
+          "video_restricted" : true
+        },
+        {
+          "pos" : 0,
+          "type" : "img",
+          "url" : "https://www.youtube.com/watch?v=YiTA20fAquU",
+          "id" : 10,
+          "num_thumbs" : 1,
+          "name" : "Jesus & Pedro (Gran Hermano)",
+          "description" : "Video I made for a friend's wedding.",
+          "video_restricted" : true
         },
         {
           "pos": 0,

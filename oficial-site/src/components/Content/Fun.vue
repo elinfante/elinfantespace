@@ -7,8 +7,8 @@
       <div class="content-page">
 
         <div v-for="(funItem,index) in designVideosArray" class="project__wrap fadeOut">    
-            <funItem :funItemMO="funItem" :numProject="index+1"></funItem>
-          </div>  
+          <funItem :funItemMO="funItem" :numProject="index+1"></funItem>
+        </div>  
 
       </div>
     </div>
