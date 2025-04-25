@@ -72,7 +72,7 @@
 
             <div class="row breakdown">
               
-              <div class="col-md-6">
+              <div class="col-md-4">
 
                 <h5><span> <i class="fa fa-arrow-right"></i> Design & Print</span></h5>
 
