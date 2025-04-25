@@ -17,27 +17,33 @@
             </p>
 
             <div class="row breakdown">
-
-              <div class="col-md-12">
-                <h5><span> <i class="fa fa-arrow-right"></i> Web Development</span></h5>
-              </div>
               
               <div class="col-md-4">
 
+                <h5><span> <i class="fa fa-arrow-right"></i> AI & LLM</span></h5>
+
                 <ul>
                   <li>LLM (Large Language Model)</li>
+                  <li>Prompt Engineering</li>
+                  <li>OpenAI GPT Integration</li>
+                  <li>Langchain Development</li>
+                  <li>AI Model Fine-tuning</li>
+                  <li>Vector Databases</li>
+                  <li>Midjourney Prompting</li>
+                </ul>
+
+              </div>
+              
+
+              <div class="col-md-4">
+
+                <h5><span> <i class="fa fa-arrow-right"></i> Web Development</span></h5>
+
+                <ul>
                   <li>Vue2/3</li>
                   <li>JavaScript ES6</li>
                   <li>HTML</li>
                   <li>CSS3</li>
-                  <li>Compass</li>
-                </ul>
-
-              </div>
-
-              <div class="col-md-4">
-
-                <ul>
                   <li>Node.js</li>
                   <li>Gulp</li>
                   <li>NPM</li>
@@ -48,6 +54,8 @@
               </div>
 
               <div class="col-md-4">
+
+                <h5><span> <i class="fa fa-arrow-right"></i> DB & CMS</span></h5>
 
                 <ul>
                   <li>PHP</li>
@@ -64,7 +72,7 @@
 
             <div class="row breakdown">
               
-              <div class="col-md-4">
+              <div class="col-md-6">
 
                 <h5><span> <i class="fa fa-arrow-right"></i> Design & Print</span></h5>
 
@@ -73,6 +81,9 @@
                   <li>Photoshop</li>
                   <li>InDesign</li>
                   <li>Lightroom</li>
+                  <li>Canva</li>
+                  <li>Figma</li>
+                  <li>Adobe Suite</li>
                 </ul>
 
               </div>
@@ -84,6 +95,12 @@
 
                 <ul>
                   <li>Final Cut Pro</li>
+                  <li>Davinci Resolve</li>
+                  <li>Premiere Pro</li>
+                  <li>After Effects</li>
+                  <li>Motion Graphics</li>
+                  <li>Color Grading</li>
+                  <li>VFX Compositing</li>
                 </ul>
 
               </div>
