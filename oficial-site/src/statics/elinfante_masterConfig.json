@@ -794,16 +794,6 @@
           "video_restricted" : true
         },
         {
-          "pos" : 0,
-          "type" : "img",
-          "url" : "https://www.youtube.com/watch?v=YiTA20fAquU",
-          "id" : 10,
-          "num_thumbs" : 1,
-          "name" : "Jesus & Pedro (Gran Hermano)",
-          "description" : "Video I made for a friend's wedding.",
-          "video_restricted" : true
-        },
-        {
           "pos": 0,
           "type" : "video",
           "url" : "https://www.youtube.com/embed/jOO4uNzGFzk",
