@@ -723,6 +723,15 @@
           "pos" : 0,
           "type" : "img",
           "url" : false,
+          "id" : "12",
+          "num_thumbs" : 2,
+          "name" : "My Ghibli locations",
+          "description" : "My home and Richard Phibb´s studio recreated in Ghibli style."
+        },
+        {
+          "pos" : 0,
+          "type" : "img",
+          "url" : false,
           "id" : "baroquepose/the_baroque_pose",
           "num_thumbs" : 8,
           "name" : "The Baroque Pose",
